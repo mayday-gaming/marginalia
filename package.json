@@ -4,6 +4,14 @@
   "private": true,
   "description": "Platform narrativo per browser: Postilla, una nota a margine, entra nei libri per ripararli dal Refuso.",
   "license": "MIT",
+  "homepage": "https://mayday-gaming.github.io/marginalia/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayday-gaming/marginalia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mayday-gaming/marginalia/issues"
+  },
   "type": "commonjs",
   "engines": {
     "node": ">=20"

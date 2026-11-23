@@ -1,14 +1,14 @@
 # Marginalia
 
-[![CI](https://github.com/its-me-mayday/marginalia/actions/workflows/ci.yml/badge.svg)](https://github.com/its-me-mayday/marginalia/actions/workflows/ci.yml)
-![versione](https://img.shields.io/github/package-json/v/its-me-mayday/marginalia)
+[![CI](https://github.com/mayday-gaming/marginalia/actions/workflows/ci.yml/badge.svg)](https://github.com/mayday-gaming/marginalia/actions/workflows/ci.yml)
+![versione](https://img.shields.io/github/package-json/v/mayday-gaming/marginalia)
 ![licenza](https://img.shields.io/badge/licenza-MIT-blue)
 
 **Un platform narrativo per browser in cui le piattaforme sono le righe dei libri.**
 
 Esiste una biblioteca dove finiscono i libri che qualcuno ha amato troppo. Lì un errore di stampa, il **Refuso**, ha imparato a moltiplicarsi, e una nota a margine scritta a matita, **Postilla**, ha imparato a camminare. Postilla entra nei libri per ripararli. O così crede.
 
-▶ **[Gioca online](https://its-me-mayday.github.io/marginalia/)**, oppure scarica `index.html` e aprilo: è un file unico, senza server e senza dipendenze.
+▶ **[Gioca online](https://mayday-gaming.github.io/marginalia/)**, oppure scarica `index.html` e aprilo: è un file unico, senza server e senza dipendenze.
 
 ## I libri
 
