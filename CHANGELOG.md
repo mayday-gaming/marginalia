@@ -9,6 +9,9 @@ Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e le v
 ### Modificato
 - Il repository si è spostato nell'organizzazione `mayday-gaming`: link, badge e indirizzo del gioco online aggiornati.
 
+### Corretto
+- Un test leggeva il salvataggio prima che il gioco avesse finito l'avvio e falliva ogni tanto: ora i test aspettano la fine dell'avvio.
+
 ## [1.0.0] — 2026-11-15
 
 Prima versione completa: quattro libri, epilogo, e un progetto con standard di ingegneria.

@@ -1,7 +1,7 @@
 // Flussi della cornice: prologo, avvio di un libro, salvataggio, sblocchi, modalità prova, epilogo.
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
-import { launch, openGame } from './helpers/game.mjs';
+import { launch, openGame, waitForBoot } from './helpers/game.mjs';
 
 let browser;
 before(async () => {
@@ -76,8 +76,7 @@ test('i progressi restano dopo aver ricaricato la pagina', async () => {
     writeSave();
   });
   await page.reload();
-  await page.waitForFunction(() => typeof SAVE !== 'undefined');
-  await page.waitForTimeout(300);
+  await waitForBoot(page);
   const s = await page.evaluate(() => [SAVE.books[0].done, SAVE.books[1].li, G.state]);
   assert.deepEqual(s, [true, 3, 'title']);
   await context.close();

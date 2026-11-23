@@ -19,6 +19,13 @@ export async function launch() {
 }
 
 /**
+ * Aspetta che il gioco abbia finito l'avvio (font caricati, salvataggio letto): solo da lì lo stato è affidabile.
+ */
+export async function waitForBoot(page) {
+  await page.waitForFunction(() => typeof booted !== 'undefined' && booted === true);
+}
+
+/**
  * Apre una pagina di gioco pulita. Restituisce la pagina e l'elenco degli errori JavaScript
  * raccolti, che i test controllano alla fine.
  */
@@ -38,8 +45,7 @@ export async function openGame(
   page.on('pageerror', e => errors.push(e.message));
   page.on('console', m => m.type() === 'error' && errors.push(m.text()));
   await page.goto(GAME_URL);
-  await page.waitForFunction(() => typeof G !== 'undefined' && typeof loadLevel === 'function');
-  await page.waitForTimeout(200);
+  await waitForBoot(page);
   await page.addScriptTag({ path: BOTS });
   // ferma il ciclo di gioco reale: i test fanno avanzare la simulazione a mano, in modo deterministico
   await page.evaluate(() => {
